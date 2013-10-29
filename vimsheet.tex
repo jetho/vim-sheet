@@ -419,8 +419,7 @@
 \cm{:\%s/\ctrl/hello/g}{replace the begining of each line by hello}
 \cm{:\%s/\$/Harry/g}{replace the end of each line by Harry}
 \cm{:\%s/ *\$//g}{delete all white spaces at end of lines}
-\cm{:\%s/\ctrl\bs(.*\bs)\bs$n$\bs$1$\$/\bs$1$/}{ delete duplicate lines
-}
+\cm{:\%s/\ctrl\bs(.*\bs)\bs$n$\bs$1$\$/\bs$1$/}{delete duplicate lines}
 \cm{:\%s,\bs(all/.*\bs)\bs@$<$=/,\_,g}{replace all / with \_ AFTER "all/"}
 \cm{:g/string/d}{delete all lines containing string}
 \cm{:v/string/d}{delete all lines not containing string}
