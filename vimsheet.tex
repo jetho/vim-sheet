@@ -166,6 +166,22 @@
 \cm{]p [p}{like {\tt p}, {\tt P} with indent adjusted}
 \cm{gp gP}{like {\tt p}, {\tt P} leaving cursor after new text}
 
+\subsection{Undoing \& repeating}
+\cm{u U}{undo last command, restore last changed line}
+\cm{.\thinspace\thinspace\ctrl R}{repeat last changes, redo last undo}
+\cm{$n$.\ }{repeat last changes with count replaced by $n$}
+\cm{:$r$g/$p$/$c$}{execute {\it Ex\/} command $c$ on range $r$}
+\cn{where pattern $p$ matches}
+\cm{:$r$g!/$p$/$c$}{execute {\it Ex\/} command $c$ on range $r$}
+\cn{where pattern $p$ does not match}
+
+\subsection{Visual mode}
+\cm{v V \ctrl V}{start/stop highlighting characters, lines, block}
+\cm{o}{exchange cursor position with start of highlighting}
+\cm{gv}{start highlighting on previous visual area}
+\cm{aw as ap}{select a word, a sentence, a paragraph}
+\cm{ab aB}{select a block ( ), a block {\tt\lapos} {\tt\rapos}}
+
 \subsection{Advanced insertion}
 \cm{g?$m$}{perform rot13 encoding on movement $m$}
 \cm{$n$\ctrl A $n$\ctrl X}{$+n$, $-n$ to number under cursor}
@@ -200,22 +216,6 @@
 \cm{a$O$ i$O$}{text object, inner object}
 \cm{w W s p}{word, WORD, sentence, paragraph}
 \cm{t \{ [ (  < " '}{XML tags, enclosings}
-
-\subsection{Visual mode}
-\cm{v V \ctrl V}{start/stop highlighting characters, lines, block}
-\cm{o}{exchange cursor position with start of highlighting}
-\cm{gv}{start highlighting on previous visual area}
-\cm{aw as ap}{select a word, a sentence, a paragraph}
-\cm{ab aB}{select a block ( ), a block {\tt\lapos} {\tt\rapos}}
-
-\subsection{Undoing \& repeating}
-\cm{u U}{undo last command, restore last changed line}
-\cm{.\thinspace\thinspace\ctrl R}{repeat last changes, redo last undo}
-\cm{$n$.\ }{repeat last changes with count replaced by $n$}
-\cm{:$r$g/$p$/$c$}{execute {\it Ex\/} command $c$ on range $r$}
-\cn{where pattern $p$ matches}
-\cm{:$r$g!/$p$/$c$}{execute {\it Ex\/} command $c$ on range $r$}
-\cn{where pattern $p$ does not match}
 
 \subsection{Macros \& Registers}
 \cm{q$c$ q$C$}{record, append typed characters in register $c$}
